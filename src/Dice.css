@@ -1,0 +1,17 @@
+.dice {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 2px 2px rgb(0,0,0,0.15);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 248, 186);
+    cursor: pointer;
+}
+
+.locked {
+    background-color: rgb(234, 174, 53);
+}
