@@ -8,6 +8,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px auto;
 }
 
 main button {
@@ -16,11 +17,15 @@ main button {
     width: 120px;
     line-height: 40px;
     text-align: center;
-    background-color: aqua;
+    background-color: orangered;
     font-size: 1.3em;
     border: none;
     border-radius: 6px;
     font-weight: 800;
+}
+
+main button:hover {
+    cursor: pointer;
 }
 
 main button:focus {

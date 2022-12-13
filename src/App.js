@@ -1,4 +1,5 @@
 import React from 'react';
+import Confetti from 'react-confetti';
 import Dice from './Dice';
 import Timer from './Timer';
 import "./App.css";
@@ -57,14 +58,15 @@ function App() {
 
   return (
     <main>
-      <h1>Tenzies Game</h1>
+      {isGameOver ? <Confetti /> : null }
+      <h1>{isGameOver ? "Congratulation!" : "Tenzies Game" }</h1>
       <Timer isGameOver={isGameOver} reset={reset} resetOff={resetOff}/>
       <div className='container'>
         {dices.map((item) => {
           return <Dice key={item.id} id={item.id} value={item.value} locked={item.locked} switchLock={switchLock}/>
         })}
       </div>
-      <button onClick={handleClick}>{isGameOver ? "Reset" : "Roll" }</button>
+      <button onClick={handleClick}>{isGameOver ? "Restart" : "Roll" }</button>
     </main>
   );
 }
